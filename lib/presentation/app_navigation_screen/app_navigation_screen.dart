@@ -1,8 +1,6 @@
 import 'controller/app_navigation_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:tejaswi_s_application1/core/app_export.dart';
-import 'package:tejaswi_s_application1/presentation/captcha_dialog/captcha_dialog.dart';
-import 'package:tejaswi_s_application1/presentation/captcha_dialog/controller/captcha_controller.dart';
 
 class AppNavigationScreen extends GetWidget<AppNavigationController> {
   @override
@@ -64,57 +62,6 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                       children: [
                                         GestureDetector(
                                             onTap: () {
-                                              onTapCaptcha();
-                                            },
-                                            child: Container(
-                                                width:
-                                                    getHorizontalSize(375.00),
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.min,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "lbl_captcha"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20Black900
-                                                                      .copyWith()))),
-                                                      Container(
-                                                          height:
-                                                              getVerticalSize(
-                                                                  1.00),
-                                                          width:
-                                                              getHorizontalSize(
-                                                                  375.00),
-                                                          margin:
-                                                              getMargin(top: 5),
-                                                          decoration: BoxDecoration(
-                                                              color: ColorConstant
-                                                                  .bluegray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
                                               onTapCameraAccess();
                                             },
                                             child: Container(
@@ -149,7 +96,7 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                                       TextAlign
                                                                           .center,
                                                                   style: AppStyle
-                                                                      .txtRobotoRegular20Black90012
+                                                                      .txtRobotoRegular20Black900
                                                                       .copyWith()))),
                                                       Container(
                                                           height:
@@ -166,17 +113,6 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ])))
                                       ])))))
                 ]))));
-  }
-
-  onTapCaptcha() {
-    Get.defaultDialog(
-      title: '',
-      content: CaptchaDialog(
-        Get.put(
-          CaptchaController(),
-        ),
-      ),
-    );
   }
 
   onTapCameraAccess() {

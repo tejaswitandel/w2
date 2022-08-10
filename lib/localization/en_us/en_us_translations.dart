@@ -4,7 +4,6 @@ final Map<String, String> enUs = {
   "lbl_camera_access": "Camera Access",
   "msg_access_your_cam": "Access your camera",
   "lbl_deny": "Deny",
-  "lbl_captcha": "Captcha",
   "msg_select_all_imag": "Select all images with a bicycle.",
   "msg_dhiwise_app_wan": "DhiWise app wants to",
   "lbl_allow": "Allow",

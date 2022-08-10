@@ -2,33 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tejaswi_s_application1/core/app_export.dart';
 
 class AppDecoration {
-  static BoxDecoration get fillBlueA200 => BoxDecoration(
-        color: ColorConstant.blueA200,
-      );
-  static BoxDecoration get outlineBluegray100 => BoxDecoration(
-        color: ColorConstant.whiteA700,
-        border: Border.all(
-          color: ColorConstant.bluegray100,
-          width: getHorizontalSize(
-            1.00,
-          ),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: ColorConstant.black90033,
-            spreadRadius: getHorizontalSize(
-              2.00,
-            ),
-            blurRadius: getHorizontalSize(
-              2.00,
-            ),
-            offset: Offset(
-              0,
-              1,
-            ),
-          ),
-        ],
-      );
   static BoxDecoration get fillGray50 => BoxDecoration(
         color: ColorConstant.gray50,
       );

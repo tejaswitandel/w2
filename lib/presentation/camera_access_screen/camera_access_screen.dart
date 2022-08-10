@@ -162,11 +162,7 @@ class CameraAccessScreen extends GetWidget<CameraAccessController> {
                                             children: [
                                               CustomButton(
                                                   width: 134,
-                                                  text: "lbl_deny".tr,
-                                                  variant: ButtonVariant
-                                                      .OutlineBlueA700,
-                                                  fontStyle: ButtonFontStyle
-                                                      .GilroyMedium14),
+                                                  text: "lbl_deny".tr),
                                               CustomButton(
                                                   width: 134,
                                                   text: "lbl_allow".tr,

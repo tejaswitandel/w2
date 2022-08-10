@@ -82,35 +82,26 @@ class CustomButton extends StatelessWidget {
       case ButtonVariant.OutlineBlueA700:
         return null;
       default:
-        return ColorConstant.blueA200;
+        return null;
     }
   }
 
   _setBorder() {
     switch (variant) {
-      case ButtonVariant.OutlineBlueA700:
+      case ButtonVariant.FillBlueA700:
+        return null;
+      default:
         return Border.all(
           color: ColorConstant.blueA700,
           width: getHorizontalSize(
             1.00,
           ),
         );
-      case ButtonVariant.FillBlueA200:
-      case ButtonVariant.FillBlueA700:
-        return null;
-      default:
-        return null;
     }
   }
 
   _setBorderRadius() {
     switch (shape) {
-      case ButtonShape.RoundedBorder2:
-        return BorderRadius.circular(
-          getHorizontalSize(
-            2.00,
-          ),
-        );
       case ButtonShape.Square:
         return BorderRadius.circular(0);
       default:
@@ -124,15 +115,6 @@ class CustomButton extends StatelessWidget {
 
   _setFontStyle() {
     switch (fontStyle) {
-      case ButtonFontStyle.GilroyMedium14:
-        return TextStyle(
-          color: ColorConstant.blueA700,
-          fontSize: getFontSize(
-            14,
-          ),
-          fontFamily: 'Gilroy',
-          fontWeight: FontWeight.w500,
-        );
       case ButtonFontStyle.GilroyMedium14WhiteA700:
         return TextStyle(
           color: ColorConstant.whiteA700,
@@ -144,11 +126,11 @@ class CustomButton extends StatelessWidget {
         );
       default:
         return TextStyle(
-          color: ColorConstant.whiteA700,
+          color: ColorConstant.blueA700,
           fontSize: getFontSize(
             14,
           ),
-          fontFamily: 'Roboto',
+          fontFamily: 'Gilroy',
           fontWeight: FontWeight.w500,
         );
     }
@@ -157,7 +139,6 @@ class CustomButton extends StatelessWidget {
 
 enum ButtonShape {
   Square,
-  RoundedBorder2,
   RoundedBorder6,
 }
 
@@ -166,13 +147,11 @@ enum ButtonPadding {
 }
 
 enum ButtonVariant {
-  FillBlueA200,
   OutlineBlueA700,
   FillBlueA700,
 }
 
 enum ButtonFontStyle {
-  RobotoMedium14,
   GilroyMedium14,
   GilroyMedium14WhiteA700,
 }
